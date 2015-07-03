@@ -427,32 +427,56 @@ public class Tester
 		test( lhs > rhs );
 	}
 
-	public static void isFalse(String string, boolean test)
+	/**
+	 * Test if a boolean value is false.
+	 * 
+	 * @param message the message to display when running the test
+	 * @param value the boolean value to test
+	 */
+	public static void isFalse(String message, boolean value)
 	{
 		checkScope();
-		System.out.println("\t\t"+string+": "+test);
-		test( !test );
+		System.out.println("\t\t"+message+": "+value);
+		test( !value );
 	}
 
-	public static void isNotNull(String string, Object o)
+	/**
+	 * Test if an Object is non-null.
+	 * 
+	 * @param message the message to display when running the test
+	 * @param object the Object to test
+	 */
+	public static void isNotNull(String message, Object object)
 	{
 		checkScope();
-		System.out.println("\t\t"+string+": "+o);
-		test( o != null );
+		System.out.println("\t\t"+message+": "+object);
+		test( object != null );
 	}
 
-	public static void isNull(String string, Object o)
+	/**
+	 * Test if an Object is null.
+	 * 
+	 * @param message the message to display when running the test
+	 * @param object the Object to test
+	 */
+	public static void isNull(String message, Object object)
 	{
 		checkScope();
-		System.out.println("\t\t"+string+": "+o);
-		test( o == null );
+		System.out.println("\t\t"+message+": "+object);
+		test( object == null );
 	}
 
-	public static void isTrue(String string, boolean test)
+	/**
+	 * Test if a boolean value is true.
+	 * 
+	 * @param message the message to display when running the test
+	 * @param value the boolean value to test
+	 */
+	public static void isTrue(String message, boolean value)
 	{
 		checkScope();
-		System.out.println("\t\t"+string+": "+test);
-		test( test );
+		System.out.println("\t\t"+message+": "+value);
+		test( value );
 	}
 
 	/**

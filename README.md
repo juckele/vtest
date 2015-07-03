@@ -13,4 +13,4 @@ import com.johnuckele.vtest.Tester;
   Tester.test("Addition test", basicMath, 4);
 </code></pre>
 
-vtest does expect a different order for expected and actual parameters than JUnit, but there is no technical need to follow the named usage. You can continue writing tests in the same order as JUnit and the verbose output will still read in an appropriate manner. As long as operands are ordered correctly for inequality tests (the second arguemt will be the LHS of the the inequality, the third argument will be the RHS), 
+vtest doesn't specify a strict 'expected' vs 'actual' ordering, since most of the tests are equality or inequality tests, and one could argue either format is more readable.
