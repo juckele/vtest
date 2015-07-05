@@ -143,7 +143,7 @@ public class TestTests
     public void testEqualityForFloatingPointNumbers()
     {
         float pif = (float) Math.PI, piApproxf = 3.14f, sqrt2f = (float) Math.sqrt(2), sqrt2Approxf = 1.41f;
-        double pi = Math.PI, piApprox = 3.14, sqrt2 = Math.sqrt(2), sqrt2Approx = 1.41;
+        double pi = Math.PI, piApprox = 3.14, sqrt2 = Math.sqrt(2);
 
         // Test ==
         Tester.equal("equal", piApprox, pi, 0.002);
