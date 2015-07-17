@@ -7,10 +7,10 @@ import static org.junit.Assert.assertTrue;
  * annotations on test methods. Each method of Tester will automatically check
  * scope to print test progress, print messages of each test, and print the
  * inputs of the test before printing the pass/fail status of the test.
- * 
+ *
  * Because the messages print on every test run, not just failures, the test
  * messages should generally be affirmative statements of expectations.
- * 
+ *
  * @author John Uckele
  */
 public class Tester
@@ -38,7 +38,7 @@ public class Tester
 
     /**
      * Test if two boolean values are equal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -55,7 +55,7 @@ public class Tester
 
     /**
      * Test if two byte values are equal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -72,7 +72,7 @@ public class Tester
 
     /**
      * Test if two char values are equal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -89,7 +89,7 @@ public class Tester
 
     /**
      * Test if a Comparable object is equal to another object.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -108,7 +108,7 @@ public class Tester
 
     /**
      * Test if two double values are equal within a supplied margin.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -129,7 +129,7 @@ public class Tester
 
     /**
      * Test if two float values are equal within a supplied margin
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -150,7 +150,7 @@ public class Tester
 
     /**
      * Test if two int values are equal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -167,7 +167,7 @@ public class Tester
 
     /**
      * Test if two long values are equal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -184,7 +184,7 @@ public class Tester
 
     /**
      * Test if two short values are equal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -201,7 +201,7 @@ public class Tester
 
     /**
      * Test if two String objects are equal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -218,7 +218,7 @@ public class Tester
 
     /**
      * A test that fails if it is reached in the code.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      */
@@ -231,7 +231,7 @@ public class Tester
 
     /**
      * Test if one byte value is greater than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -248,7 +248,7 @@ public class Tester
 
     /**
      * Test if one char value is greater than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -265,7 +265,7 @@ public class Tester
 
     /**
      * Test if a Comparable object is greater than or equal to another object.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -285,7 +285,7 @@ public class Tester
     /**
      * Test if one double value is greater than or equal to another within a
      * supplied margin
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -307,7 +307,7 @@ public class Tester
     /**
      * Test if one float value is greater than or equal to another within a
      * supplied margin
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -328,7 +328,7 @@ public class Tester
 
     /**
      * Test if one int value is greater than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -345,7 +345,7 @@ public class Tester
 
     /**
      * Test if one long value is greater than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -362,7 +362,7 @@ public class Tester
 
     /**
      * Test if one short value is greater than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -379,7 +379,7 @@ public class Tester
 
     /**
      * Test if one byte value is greater than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -396,7 +396,7 @@ public class Tester
 
     /**
      * Test if one char value is greater than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -413,7 +413,7 @@ public class Tester
 
     /**
      * Test if a Comparable object is greater than another object.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -433,7 +433,7 @@ public class Tester
     /**
      * Test if one double value is greater than another within a supplied
      * margin.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -454,7 +454,7 @@ public class Tester
 
     /**
      * Test if one float value is greater than another within a supplied margin.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -475,7 +475,7 @@ public class Tester
 
     /**
      * Test if one int value is greater than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -492,7 +492,7 @@ public class Tester
 
     /**
      * Test if one long value is greater than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -509,7 +509,7 @@ public class Tester
 
     /**
      * Test if one short value is greater than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -526,7 +526,7 @@ public class Tester
 
     /**
      * Test if a boolean value is false.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param value
@@ -541,7 +541,7 @@ public class Tester
 
     /**
      * Test if an Object is non-null.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param object
@@ -556,7 +556,7 @@ public class Tester
 
     /**
      * Test if an Object is null.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param object
@@ -571,7 +571,7 @@ public class Tester
 
     /**
      * Test if a boolean value is true.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param value
@@ -586,7 +586,7 @@ public class Tester
 
     /**
      * Test if one byte value is greater than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -603,7 +603,7 @@ public class Tester
 
     /**
      * Test if one char value is less than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -620,7 +620,7 @@ public class Tester
 
     /**
      * Test if one Comparable object is less than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -640,7 +640,7 @@ public class Tester
     /**
      * Test if one double value is less than or equal to another within a
      * supplied margin
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -662,7 +662,7 @@ public class Tester
     /**
      * Test if one float value is less than or equal to another within a
      * supplied margin
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -683,7 +683,7 @@ public class Tester
 
     /**
      * Test if one int value is less than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -700,7 +700,7 @@ public class Tester
 
     /**
      * Test if one long value is less than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -717,7 +717,7 @@ public class Tester
 
     /**
      * Test if one short value is less than or equal to another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -734,7 +734,7 @@ public class Tester
 
     /**
      * Test if one byte value is less than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -751,7 +751,7 @@ public class Tester
 
     /**
      * Test if one char value is less than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -768,7 +768,7 @@ public class Tester
 
     /**
      * Test if one Comparable object is less than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -787,7 +787,7 @@ public class Tester
 
     /**
      * Test if one double value is less than another within a supplied margin.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -808,7 +808,7 @@ public class Tester
 
     /**
      * Test if one float value is less than another within a supplied margin.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -829,7 +829,7 @@ public class Tester
 
     /**
      * Test if one int value is less than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -846,7 +846,7 @@ public class Tester
 
     /**
      * Test if one long value is less than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -863,7 +863,7 @@ public class Tester
 
     /**
      * Test if one short value is less than another.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -880,7 +880,7 @@ public class Tester
 
     /**
      * Test if two boolean values are unequal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -897,7 +897,7 @@ public class Tester
 
     /**
      * Test if two byte values are unequal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -914,7 +914,7 @@ public class Tester
 
     /**
      * Test if two char values are unequal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -931,7 +931,7 @@ public class Tester
 
     /**
      * Test if a Comparable object is unequal to another object.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -950,7 +950,7 @@ public class Tester
 
     /**
      * Test if double char values are unequal within a supplied margin.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -971,7 +971,7 @@ public class Tester
 
     /**
      * Test if float char values are unequal within a supplied margin.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -992,7 +992,7 @@ public class Tester
 
     /**
      * Test if two int values are unequal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -1009,7 +1009,7 @@ public class Tester
 
     /**
      * Test if two long values are unequal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -1026,7 +1026,7 @@ public class Tester
 
     /**
      * Test if two short values are unequal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -1043,7 +1043,7 @@ public class Tester
 
     /**
      * Test if two String objects are unequal.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      * @param lhs
@@ -1060,7 +1060,7 @@ public class Tester
 
     /**
      * A test that passes if it is reached in the code.
-     * 
+     *
      * @param message
      *            the message to display when running the test
      */
