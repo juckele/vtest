@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 
 sourceCompatibility = 1.5
 targetCompatibility = 1.5
@@ -13,3 +14,21 @@ dependencies {
   compile group: 'junit', name: 'junit', version: '4.+'
 }
 
+
+group = 'com.johnuckele'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            url "../juckele-mvn-repo/releases"
+        }
+    }
+}
