@@ -2,14 +2,16 @@ package com.johnuckele.vtest;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.Collection;
+import java.util.Map;
+
 /**
- * A verbose wrapper for JUnit tests. Using Tester still requires using @Test
- * annotations on test methods. Each method of Tester will automatically check
- * scope to print test progress, print messages of each test, and print the
- * inputs of the test before printing the pass/fail status of the test.
+ * A verbose wrapper for JUnit tests. Using Tester still requires using @Test annotations on test methods. Each method
+ * of Tester will automatically check scope to print test progress, print messages of each test, and print the inputs of
+ * the test before printing the pass/fail status of the test.
  *
- * Because the messages print on every test run, not just failures, the test
- * messages should generally be affirmative statements of expectations.
+ * Because the messages print on every test run, not just failures, the test messages should generally be affirmative
+ * statements of expectations.
  *
  * @author John Uckele
  */
@@ -34,6 +36,40 @@ public class Tester
             methodScope = localMethodScope;
             System.out.println("\t" + methodScope);
         }
+    }
+
+    /**
+     * Test if a collection contains a value
+     *
+     * @param message
+     *            the message to display when running the test
+     * @param lhs
+     *            the left hand side of the membership
+     * @param rhs
+     *            the right hand side of the membership
+     */
+    public static <K> void contains(String message, Collection<K> lhs, K rhs)
+    {
+        checkScope();
+        System.out.println("\t\t" + message + ": " + lhs + " contains " + rhs);
+        test(lhs.contains(rhs));
+    }
+
+    /**
+     * Test if a map contains a key with a value
+     *
+     * @param message
+     *            the message to display when running the test
+     * @param lhs
+     *            the left hand side of the membership
+     * @param rhs
+     *            the right hand side of the membership
+     */
+    public static <K> void contains(String message, Map<K, ?> lhs, K rhs)
+    {
+        checkScope();
+        System.out.println("\t\t" + message + ": " + lhs + " contains " + rhs);
+        test(lhs.containsKey(rhs));
     }
 
     /**
@@ -116,8 +152,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void equal(String message, double lhs, double rhs, double margin)
     {
@@ -137,8 +172,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void equal(String message, float lhs, float rhs, float margin)
     {
@@ -283,8 +317,7 @@ public class Tester
     }
 
     /**
-     * Test if one double value is greater than or equal to another within a
-     * supplied margin
+     * Test if one double value is greater than or equal to another within a supplied margin
      *
      * @param message
      *            the message to display when running the test
@@ -293,8 +326,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void greaterOrEqual(String message, double lhs, double rhs, double margin)
     {
@@ -305,8 +337,7 @@ public class Tester
     }
 
     /**
-     * Test if one float value is greater than or equal to another within a
-     * supplied margin
+     * Test if one float value is greater than or equal to another within a supplied margin
      *
      * @param message
      *            the message to display when running the test
@@ -315,8 +346,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void greaterOrEqual(String message, float lhs, float rhs, float margin)
     {
@@ -431,8 +461,7 @@ public class Tester
     }
 
     /**
-     * Test if one double value is greater than another within a supplied
-     * margin.
+     * Test if one double value is greater than another within a supplied margin.
      *
      * @param message
      *            the message to display when running the test
@@ -441,8 +470,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void greaterThan(String message, double lhs, double rhs, double margin)
     {
@@ -462,8 +490,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void greaterThan(String message, float lhs, float rhs, float margin)
     {
@@ -638,8 +665,7 @@ public class Tester
     }
 
     /**
-     * Test if one double value is less than or equal to another within a
-     * supplied margin
+     * Test if one double value is less than or equal to another within a supplied margin
      *
      * @param message
      *            the message to display when running the test
@@ -648,8 +674,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void lessOrEqual(String message, double lhs, double rhs, double margin)
     {
@@ -660,8 +685,7 @@ public class Tester
     }
 
     /**
-     * Test if one float value is less than or equal to another within a
-     * supplied margin
+     * Test if one float value is less than or equal to another within a supplied margin
      *
      * @param message
      *            the message to display when running the test
@@ -670,8 +694,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void lessOrEqual(String message, float lhs, float rhs, float margin)
     {
@@ -795,8 +818,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void lessThan(String message, double lhs, double rhs, double margin)
     {
@@ -816,8 +838,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void lessThan(String message, float lhs, float rhs, float margin)
     {
@@ -958,8 +979,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void notEqual(String message, double lhs, double rhs, double margin)
     {
@@ -979,8 +999,7 @@ public class Tester
      * @param rhs
      *            the right hand side of the equality
      * @param margin
-     *            the maximum difference between which two values are still
-     *            considered the same
+     *            the maximum difference between which two values are still considered the same
      */
     public static void notEqual(String message, float lhs, float rhs, float margin)
     {
