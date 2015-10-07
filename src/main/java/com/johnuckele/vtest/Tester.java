@@ -332,8 +332,7 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " >= " + rhs + " ± " + margin);
-        double difference = lhs - rhs;
-        test(lhs >= rhs - Math.abs(difference));
+        test(lhs >= rhs + Math.abs(margin));
     }
 
     /**
@@ -352,8 +351,7 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " >= " + rhs + " ± " + margin);
-        double difference = lhs - rhs;
-        test(lhs >= rhs - Math.abs(difference));
+        test(lhs >= rhs + Math.abs(margin));
     }
 
     /**
@@ -476,8 +474,7 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " > " + rhs + " ± " + margin);
-        double difference = lhs - rhs;
-        test(lhs > rhs - Math.abs(difference));
+        test(lhs > rhs + Math.abs(margin));
     }
 
     /**
@@ -496,8 +493,7 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " > " + rhs + " ± " + margin);
-        double difference = lhs - rhs;
-        test(lhs > rhs - Math.abs(difference));
+        test(lhs > rhs + Math.abs(margin));
     }
 
     /**
@@ -680,8 +676,7 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " <= " + rhs + " ± " + margin);
-        double difference = lhs - rhs;
-        test(lhs <= rhs - Math.abs(difference));
+        test(lhs <= rhs - Math.abs(margin));
     }
 
     /**
@@ -700,8 +695,7 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " <= " + rhs + " ± " + margin);
-        double difference = lhs - rhs;
-        test(lhs <= rhs - Math.abs(difference));
+        test(lhs <= rhs - Math.abs(margin));
     }
 
     /**
@@ -824,8 +818,7 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " < " + rhs + " ± " + margin);
-        double difference = lhs - rhs;
-        test(lhs < rhs - Math.abs(difference));
+        test(lhs < rhs - Math.abs(margin));
     }
 
     /**
@@ -844,8 +837,7 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " < " + rhs + " ± " + margin);
-        double difference = lhs - rhs;
-        test(lhs < rhs - Math.abs(difference));
+        test(lhs < rhs - Math.abs(margin));
     }
 
     /**
