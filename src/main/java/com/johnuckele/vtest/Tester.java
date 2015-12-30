@@ -143,6 +143,27 @@ public class Tester
     }
 
     /**
+     * Test if an object is equal to another object.
+     *
+     * @param message
+     *            the message to display when running the test
+     * @param lhs
+     *            the left hand side of the equality
+     * @param rhs
+     *            the right hand side of the equality
+     */
+    public static void equal(String message, Object lhs, Object rhs)
+    {
+        checkScope();
+        System.out.println("\t\t" + message + " (object equals): " + lhs + " == " + rhs);
+        test(lhs.equals(rhs));
+        System.out.println("\t\t" + message + " (symmetric object equals): " + rhs + " == " + lhs);
+        test(rhs.equals(lhs));
+        System.out.println("\t\t" + message + " (hash code equals): " + lhs.hashCode() + " == " + rhs.hashCode());
+        test(lhs.hashCode() == rhs.hashCode());
+    }
+
+    /**
      * Test if two double values are equal within a supplied margin.
      *
      * @param message
@@ -959,6 +980,27 @@ public class Tester
         checkScope();
         System.out.println("\t\t" + message + ": " + lhs + " != " + rhs);
         test(lhs.compareTo(rhs) != 0);
+    }
+
+    /**
+     * Test if an object is unequal to another object.
+     *
+     * @param message
+     *            the message to display when running the test
+     * @param lhs
+     *            the left hand side of the equality
+     * @param rhs
+     *            the right hand side of the equality
+     */
+    public static void notEqual(String message, Object lhs, Object rhs)
+    {
+        checkScope();
+        System.out.println("\t\t" + message + " (object equals): " + lhs + " != " + rhs);
+        test(!lhs.equals(rhs));
+        System.out.println("\t\t" + message + " (symmetric object equals): " + rhs + " != " + lhs);
+        test(!rhs.equals(lhs));
+        System.out.println("\t\t" + message + " (hash code equals): " + lhs.hashCode() + " !w= " + rhs.hashCode());
+        test(lhs.hashCode() != rhs.hashCode());
     }
 
     /**

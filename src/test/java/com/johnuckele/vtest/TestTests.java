@@ -191,9 +191,15 @@ public class TestTests
     }
 
     @Test
+    public void testEqualsForObject()
+    {
+        // TODO: IMPLEMENT
+    }
+
+    @Test
     public void testEqualsForFixedPrecisionNumbers()
     {
-
+        // TODO: IMPLEMENT
     }
 
     @Test
