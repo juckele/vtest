@@ -156,11 +156,14 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + " (object equals): " + lhs + " == " + rhs);
-        test(lhs.equals(rhs));
+        test((lhs != null || rhs == null) && lhs.equals(rhs));
         System.out.println("\t\t" + message + " (symmetric object equals): " + rhs + " == " + lhs);
-        test(rhs.equals(lhs));
-        System.out.println("\t\t" + message + " (hash code equals): " + lhs.hashCode() + " == " + rhs.hashCode());
-        test(lhs.hashCode() == rhs.hashCode());
+        test((rhs != null || lhs == null) && rhs.equals(lhs));
+        if (lhs != null && rhs != null)
+        {
+            System.out.println("\t\t" + message + " (hash code equals): " + lhs.hashCode() + " == " + rhs.hashCode());
+            test(lhs.hashCode() == rhs.hashCode());
+        }
     }
 
     /**
@@ -996,11 +999,14 @@ public class Tester
     {
         checkScope();
         System.out.println("\t\t" + message + " (object equals): " + lhs + " != " + rhs);
-        test(!lhs.equals(rhs));
+        test(!(lhs != null || rhs == null) || !lhs.equals(rhs));
         System.out.println("\t\t" + message + " (symmetric object equals): " + rhs + " != " + lhs);
-        test(!rhs.equals(lhs));
-        System.out.println("\t\t" + message + " (hash code equals): " + lhs.hashCode() + " !w= " + rhs.hashCode());
-        test(lhs.hashCode() != rhs.hashCode());
+        test(!(rhs != null || lhs == null) || !rhs.equals(lhs));
+        if (lhs != null && rhs != null)
+        {
+            System.out.println("\t\t" + message + " (hash code equals): " + lhs.hashCode() + " != " + rhs.hashCode());
+            test(lhs.hashCode() != rhs.hashCode());
+        }
     }
 
     /**

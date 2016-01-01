@@ -193,7 +193,61 @@ public class TestTests
     @Test
     public void testEqualsForObject()
     {
-        // TODO: IMPLEMENT
+        Object anObject = "An Object";
+        Object equalObject = "An Object";
+        Object unequalObject = "A Different Object";
+        Object nullObject = null;
+        Tester.equal("equal", anObject, anObject);
+        Tester.equal("equal", anObject, equalObject);
+        try
+        {
+            Tester.equal("equal", anObject, unequalObject);
+            Tester.fail("Preceding case should have failed");
+        }
+        catch (AssertionError e)
+        {
+            Tester.pass("Preceding case should have failed");
+        }
+        try
+        {
+            Tester.equal("equal", anObject, nullObject);
+            Tester.fail("Preceding case should have failed");
+        }
+        catch (AssertionError e)
+        {
+            Tester.pass("Preceding case should have failed");
+        }
+        try
+        {
+            Tester.equal("equal", nullObject, equalObject);
+            Tester.fail("Preceding case should have failed");
+        }
+        catch (AssertionError e)
+        {
+            Tester.pass("Preceding case should have failed");
+        }
+
+        try
+        {
+            Tester.notEqual("notEqual", anObject, anObject);
+            Tester.fail("Preceding case should have failed");
+        }
+        catch (AssertionError e)
+        {
+            Tester.pass("Preceding case should have failed");
+        }
+        try
+        {
+            Tester.notEqual("notEqual", anObject, equalObject);
+            Tester.fail("Preceding case should have failed");
+        }
+        catch (AssertionError e)
+        {
+            Tester.pass("Preceding case should have failed");
+        }
+        Tester.notEqual("notEqual", anObject, unequalObject);
+        Tester.notEqual("notEqual", anObject, nullObject);
+        Tester.notEqual("notEqual", nullObject, anObject);
     }
 
     @Test
